@@ -1,0 +1,32 @@
+body {
+  font-family: 'Gloria Hallelujah', cursive;
+  /* font-family: 'Rampart One', cursive;
+ */
+}
+
+.wrapper {
+  max-width: 90%;
+  width: 100%;
+  background-color: aqua;
+  margin: 0 auto;
+}
+
+.header__title {
+  font-family: 'Rampart One', cursive;
+}
+
+.meme__image img {
+  max-width: 80%;
+  width: 100%;
+}
+
+.meme__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.meme__name {
+  font-family: 'Shantell Sans', cursive;
+  font-size: 40px;
+}
