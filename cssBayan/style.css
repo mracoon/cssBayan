@@ -30,3 +30,17 @@ body {
   font-family: 'Shantell Sans', cursive;
   font-size: 40px;
 }
+
+.meme__icon {
+  width: 2rem;
+  height: 2rem;
+  background-image: url('./assets/icons/add.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+
+}
+
+input:checked+label {
+  display: block;
+  background-color: bisque;
+}
