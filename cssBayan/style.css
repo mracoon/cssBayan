@@ -22,7 +22,7 @@ body {
   width: 100%;
 } */
 
-.meme__image {
+.meme__image-wrap {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,6 +31,8 @@ body {
 .meme__name {
   font-family: 'Shantell Sans', cursive;
   font-size: 40px;
+  color: black;
+  transition: 0.2s;
 }
 
 .meme__icon {
@@ -39,7 +41,9 @@ body {
   background-image: url('./assets/icons/add.png');
   background-repeat: no-repeat;
   background-size: contain;
-
+  opacity: 0;
+  transform: rotate(0);
+  transition: 0.2s;
 }
 
 
@@ -48,20 +52,66 @@ body {
   display: none;
 }
 
-input:checked+label {
+/* input:checked+label {
   display: block;
   background-color: bisque;
-}
+} */
 
 .memes__form,
 .memes__input,
 .meme__label {
-  display: block;
+
   /*   cursor: pointer; */
-  cursor: url(assets/icons/m-pepecur2.cur), pointer;
+  /* cursor: url(assets/icons/m-pepecur2.cur), pointer; */
+  cursor: pointer;
 }
 
 .meme__label {
   display: block;
   width: 100%;
+}
+
+.meme__description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  background-color: aquamarine;
+}
+
+.memes__input:checked+.meme__label {
+  display: block;
+  background-color: bisque;
+}
+
+.memes__form:hover .meme__icon {
+  opacity: 1;
+}
+
+.memes__form:hover .meme__name {
+  color: blue;
+}
+
+.memes__input:checked+.meme__label .meme__icon,
+.meme__label:hover .meme__icon {
+  transform: rotate(45deg);
+
+}
+
+.meme__image {
+  height: 0;
+  transform: scale(0);
+  transition: 0.2s;
+  max-width: 32rem;
+}
+
+.memes__input:checked+.meme__label .meme__image,
+.meme__label:hover .meme__image {
+  height: auto;
+  transform: scale(1);
+}
+
+.meme__description:hover .meme__name,
+.memes__input:checked+.meme__label .meme__name {
+  color: rgb(207, 156, 255);
 }
