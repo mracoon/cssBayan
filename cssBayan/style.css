@@ -2,20 +2,41 @@ body {
   font-family: 'Gloria Hallelujah', cursive;
   /* font-family: 'Rampart One', cursive;
  */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-image: url('./assets/images/bg3.jpg');
+  background-size: cover;
+  background-repeat: repeat;
+
 }
-
-
 
 .wrapper {
   max-width: 90vw;
   width: 100%;
-  background-color: aqua;
+  /*  background-color: aqua; */
   margin: 0 auto;
 }
 
+
 .header__title {
-  font-family: 'Rampart One', cursive;
+  /*  font-family: 'Rampart One', cursive; */
+  font-family: 'Lemon', cursive;
+  /*   background: rgb(63, 94, 251);
+  background: linear-gradient(90deg, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%); */
+  background: url('./assets/images/1618440428_58-phonoteka_org-p-fon-mem-60.jpg');
+  background-size: contain;
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
+
+
+
+
+
 
 /* .meme__image img {
   max-width: 80%;
@@ -30,18 +51,19 @@ body {
 
 .meme__name {
   font-family: 'Shantell Sans', cursive;
-  font-size: 40px;
-  color: black;
+  font-size: 1.3rem;
+  color: #ffffff;
   transition: 0.2s;
 }
 
 .meme__icon {
+  min-width: 2rem;
   width: 2rem;
   height: 2rem;
   background-image: url('./assets/icons/add.png');
   background-repeat: no-repeat;
   background-size: contain;
-  opacity: 0;
+  /*  opacity: 0; */
   transform: rotate(0);
   transition: 0.2s;
 }
@@ -69,33 +91,27 @@ body {
 .meme__label {
   display: block;
   width: 100%;
+  margin-bottom: 1rem;
+
 }
+
+
 
 .meme__description {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
-  background-color: aquamarine;
+  background-color: #582707;
+  margin-bottom: 0.5rem;
+  min-height: 4rem;
+  border-radius: 1rem;
 }
 
 .memes__input:checked+.meme__label {
   display: block;
   background-color: bisque;
-}
-
-.memes__form:hover .meme__icon {
-  opacity: 1;
-}
-
-.memes__form:hover .meme__name {
-  color: blue;
-}
-
-.memes__input:checked+.meme__label .meme__icon,
-.meme__label:hover .meme__icon {
-  transform: rotate(45deg);
-
+  border-radius: 1rem;
 }
 
 .meme__image {
@@ -105,22 +121,71 @@ body {
   max-width: 32rem;
 }
 
-.memes__input:checked+.meme__label .meme__image,
-.meme__label:hover .meme__image {
+.memes__input:checked+.meme__label .meme__image {
   height: auto;
   transform: scale(1);
+  border-radius: 0.5rem;
 }
 
-.meme__description:hover .meme__name,
+.memes__input:checked+.meme__label .meme__icon {
+  transform: rotate(45deg);
+
+}
+
 .memes__input:checked+.meme__label .meme__name {
-  color: rgb(207, 156, 255);
+  color: #FF9800;
 }
 
 .meme__icon {
   z-index: 5;
   transition: 0.3s;
+  filter: invert(1);
+}
+
+/*-----------------------------------------------------*/
+@media (max-width: 320px) {}
+
+.meme__image {
+  max-width: 100%;
+}
+
+.header__title {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.memes__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/*---------------------------------------------------------*/
+/* .memes__form:hover .meme__icon {
+  opacity: 1;
+}
+
+.memes__form:hover .meme__name {
+  color: blue;
+}
+
+.meme__label:hover .meme__icon {
+  transform: rotate(45deg);
 
 }
+
+.meme__label:hover .meme__image {
+  height: auto;
+  transform: scale(1);
+}
+
+.meme__description:hover .meme__name {
+  color: rgb(207, 156, 255);
+}
+ */
+
 
 /* .meme__icon:hover {
   background-color: rgb(91, 91, 21);
