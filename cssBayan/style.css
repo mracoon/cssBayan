@@ -115,3 +115,19 @@ body {
 .memes__input:checked+.meme__label .meme__name {
   color: rgb(207, 156, 255);
 }
+
+.meme__icon {
+  z-index: 5;
+  transition: 0.3s;
+
+}
+
+/* .meme__icon:hover {
+  background-color: rgb(91, 91, 21);
+}
+
+.meme__icon:active {
+  background-color: yellow;
+}
+
+ */
