@@ -4,8 +4,10 @@ body {
  */
 }
 
+
+
 .wrapper {
-  max-width: 90%;
+  max-width: 90vw;
   width: 100%;
   background-color: aqua;
   margin: 0 auto;
@@ -15,10 +17,10 @@ body {
   font-family: 'Rampart One', cursive;
 }
 
-.meme__image img {
+/* .meme__image img {
   max-width: 80%;
   width: 100%;
-}
+} */
 
 .meme__image {
   display: flex;
@@ -40,7 +42,26 @@ body {
 
 }
 
+
+
+.memes__input {
+  display: none;
+}
+
 input:checked+label {
   display: block;
   background-color: bisque;
+}
+
+.memes__form,
+.memes__input,
+.meme__label {
+  display: block;
+  /*   cursor: pointer; */
+  cursor: url(assets/icons/m-pepecur2.cur), pointer;
+}
+
+.meme__label {
+  display: block;
+  width: 100%;
 }
