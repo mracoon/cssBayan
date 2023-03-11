@@ -94,9 +94,9 @@ body {
 .memes__input,
 .meme__label {
 
-  /*   cursor: pointer; */
-  /* cursor: url(assets/icons/m-pepecur2.cur), pointer; */
   cursor: pointer;
+  /*   cursor: url(assets/icons/m-pepecur2.cur), pointer; */
+  /*  cursor: pointer; */
 }
 
 .meme__label {
@@ -148,6 +148,10 @@ body {
 
 .memes__input:checked+.meme__label .meme__name {
   color: #FF9800;
+}
+
+.memes__input:checked+.meme__label .meme__icon {
+  filter: invert(50%) sepia(95%) saturate(594%) hue-rotate(359deg) brightness(104%) contrast(106%);
 }
 
 .meme__icon {
@@ -234,15 +238,24 @@ body {
 
     .memes__form:hover .meme__icon {
       opacity: 1;
+      filter: invert(55%) sepia(27%) saturate(998%) hue-rotate(341deg) brightness(92%) contrast(93%)
     }
 
     .memes__form:hover .meme__name {
-      color: #c47806;
+      color: #d07a41;
+      /*#c47806;*/
     }
+
+
 
     .meme__label:hover .meme__icon {
       transform: rotate(45deg);
+      filter: invert(81%) sepia(26%) saturate(506%) hue-rotate(331deg) brightness(99%) contrast(96%);
 
+    }
+
+    .meme__label:hover .meme__name {
+      color: #f7c4a5;
     }
 
     .meme__label:hover .meme__image {
@@ -250,8 +263,16 @@ body {
       transform: scale(1);
     }
 
-    .meme__description:hover .meme__name {
+    /*  .meme__description:hover .meme__name {
       color: rgb(207, 156, 255);
+    } */
+
+    .meme__label:active .meme__name {
+      color: #ffee00;
+    }
+
+    .meme__label:active .meme__icon {
+      filter: invert(82%) sepia(56%) saturate(717%) hue-rotate(359deg) brightness(103%) contrast(109%);
     }
   }
 
