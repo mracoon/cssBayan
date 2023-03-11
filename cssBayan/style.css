@@ -1,0 +1,270 @@
+/*---------bg image stabilization---------*/
+html {
+  overflow: hidden;
+  height: 100%;
+}
+
+body {
+  overflow: auto;
+  height: 100%;
+}
+
+/*--------------------------------------*/
+
+body {
+  font-family: 'Gloria Hallelujah', cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('./assets/images/bg3.jpg');
+  background-size: cover;
+  background-repeat: repeat;
+}
+
+.hr {
+  margin-bottom: 5vh;
+}
+
+.wrapper {
+  max-width: 90vw;
+  width: 100%;
+  margin: 0 auto;
+  min-width: 90vw;
+}
+
+
+.header__title {
+  font-family: 'Lemon', cursive;
+  background: url('./assets/images/1618440428_58-phonoteka_org-p-fon-mem-60.jpg');
+  background-size: 30%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: 0.05rem black;
+}
+
+.meme__image-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.meme__name {
+  font-family: 'Shantell Sans', cursive;
+  font-size: 1.3rem;
+  color: #ffffff;
+  transition: 0.4s;
+}
+
+.meme__icon {
+  min-width: 2rem;
+  width: 2rem;
+  height: 2rem;
+  background-image: url('./assets/icons/add.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0;
+  transform: rotate(0);
+  transition: 0.2s;
+}
+
+
+
+.memes__input {
+  display: none;
+}
+
+/* input:checked+label {
+  display: block;
+  background-color: bisque;
+} */
+
+
+
+.meme__label {
+  display: block;
+  width: 100%;
+  /*  margin-bottom: 1rem;
+ */
+}
+
+.meme__image {
+  margin-bottom: 0.5rem;
+}
+
+
+.meme__description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  background-color: #582707;
+  margin-bottom: 0.5rem;
+  min-height: 4rem;
+  border-radius: 1rem;
+}
+
+.memes__input:checked+.meme__label {
+  display: block;
+  border-radius: 1rem;
+}
+
+.meme__image {
+  height: 0;
+  transform: scale(0);
+  transition: 0.8s;
+  max-width: 32rem;
+}
+
+.memes__input:checked+.meme__label .meme__image {
+  height: auto;
+  transform: scale(1);
+  border-radius: 0.5rem;
+}
+
+.memes__input:checked+.meme__label .meme__icon {
+  transform: rotate(45deg);
+}
+
+.memes__input:checked+.meme__label .meme__name {
+  color: #FF9800;
+}
+
+.memes__input:checked+.meme__label .meme__icon {
+  filter: invert(50%) sepia(95%) saturate(594%) hue-rotate(359deg) brightness(104%) contrast(106%);
+}
+
+.meme__icon {
+  z-index: 5;
+  transition: 0.3s;
+  filter: invert(1);
+}
+
+/*----------------------------media-------------------------*/
+
+@media(min-width: 310px) {
+
+  .meme__image {
+    max-width: 80%;
+  }
+
+  .header__title {
+    font-size: 2.8rem;
+    margin: 1rem 0;
+    text-align: center;
+    background-size: 70%;
+  }
+
+  .memes__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+@media(min-width: 550px) {
+
+  .header__title {
+    font-size: 4rem;
+  }
+
+  .meme__name {
+    font-size: 1.7rem;
+  }
+
+  .meme__description {
+    min-height: 3rem;
+  }
+
+  .meme__icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+@media(min-width: 650px) {
+
+  .meme__name {
+    font-size: 2rem;
+  }
+
+}
+
+@media (min-width: 800px) {
+
+  .header__title {
+    font-size: 5.5rem;
+    background-size: 50%;
+  }
+
+  .meme__image {
+    width: 90%;
+    max-width: 35rem;
+  }
+}
+
+@media(min-width: 1200px) {
+
+  .header__title {
+    font-size: 7.5rem;
+    background-size: 40%;
+  }
+
+  .meme__icon {
+    opacity: 0;
+  }
+
+  .meme__name {
+    font-size: 2.3rem;
+  }
+}
+
+@media (hover: none) {
+
+  .meme__icon {
+    opacity: 1;
+  }
+
+}
+
+@media (hover: hover) and (pointer: fine) {
+
+  .memes__form:hover .meme__icon {
+    opacity: 1;
+    filter: invert(55%) sepia(27%) saturate(998%) hue-rotate(341deg) brightness(92%) contrast(93%)
+  }
+
+  .memes__form:hover .meme__name {
+    color: #d07a41;
+  }
+
+  .meme__label:hover .meme__icon {
+    transform: rotate(45deg);
+    filter: invert(81%) sepia(26%) saturate(506%) hue-rotate(331deg) brightness(99%) contrast(96%);
+  }
+
+  .meme__label:hover .meme__name {
+    color: #f7c4a5;
+  }
+
+  .meme__label:hover .meme__image {
+    height: auto;
+    transform: scale(1);
+  }
+
+  .meme__label:active .meme__name {
+    color: #ffee00;
+  }
+
+  .meme__label:active .meme__icon {
+    filter: invert(82%) sepia(56%) saturate(717%) hue-rotate(359deg) brightness(103%) contrast(109%);
+  }
+
+  .memes__form,
+  .memes__input,
+  .meme__label {
+    cursor: pointer;
+  }
+}
