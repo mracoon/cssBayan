@@ -15,11 +15,15 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  /*  justify-content: space-between; */
   background-image: url('./assets/images/bg3.jpg');
   background-size: cover;
   background-repeat: repeat;
 
+}
+
+.hr {
+  margin-bottom: 5vh;
 }
 
 .wrapper {
@@ -27,8 +31,10 @@ body {
   width: 100%;
   /*  background-color: aqua; */
   margin: 0 auto;
-  min-width: 70vw;
+  min-width: 90vw;
 }
+
+
 
 
 .header__title {
@@ -37,11 +43,13 @@ body {
   /*   background: rgb(63, 94, 251);
   background: linear-gradient(90deg, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%); */
   background: url('./assets/images/1618440428_58-phonoteka_org-p-fon-mem-60.jpg');
-  background-size: contain;
-
+  /*   background: url('./assets/images/Без\ названия.jpg'); */
+  /*  background-size: contain; */
+  background-size: 30%;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  -webkit-text-stroke: 0.05rem black;
 }
 
 
@@ -74,7 +82,7 @@ body {
   background-image: url('./assets/icons/add.png');
   background-repeat: no-repeat;
   background-size: contain;
-  /*  opacity: 0; */
+  opacity: 0;
   transform: rotate(0);
   transition: 0.2s;
 }
@@ -100,7 +108,7 @@ body {
 }
 
 .meme__image {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 
@@ -157,13 +165,14 @@ body {
 @media(min-width: 310px) {
 
   .meme__image {
-    max-width: 100%;
+    max-width: 80%;
   }
 
   .header__title {
     font-size: 2.8rem;
     margin: 1rem 0;
     text-align: center;
+    background-size: 70%;
   }
 
   .memes__form {
@@ -183,6 +192,15 @@ body {
   .meme__name {
     font-size: 1.7rem;
   }
+
+  .meme__description {
+    min-height: 3rem;
+  }
+
+  .meme__icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 }
 
 @media(min-width: 650px) {
@@ -194,6 +212,7 @@ body {
 @media (min-width: 800px) {
   .header__title {
     font-size: 5.5rem;
+    background-size: 50%;
   }
 
   /* .meme__name {
@@ -206,11 +225,11 @@ body {
     max-width: 35rem;
   }
 
-  .meme__icon {
+  /*  .meme__icon {
 
     width: 3rem;
     height: 3rem;
-  }
+  } */
 
 
 
@@ -219,6 +238,7 @@ body {
 
     .header__title {
       font-size: 7.5rem;
+      background-size: 40%;
     }
 
     .meme__icon {
@@ -266,6 +286,12 @@ body {
 }
 
  */
+}
+
+@media (hover: none) {
+  .meme__icon {
+    opacity: 1;
+  }
 }
 
 @media (hover: hover) and (pointer: fine) {
